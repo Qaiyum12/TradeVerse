@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Signup() {
+function Login() {
   let [formData, setFormData] = useState({
     email: "",
-    username: "",
     password: "",
   });
 
@@ -21,7 +20,6 @@ function Signup() {
 
     setFormData({
       email: "",
-      username: "",
       password: "",
     });
   };
@@ -47,21 +45,6 @@ function Signup() {
         </div>
 
         <div class="mb-4">
-          <label htmlFor="username" className="form-label">
-            Username
-          </label>
-          <input
-            type="text"
-            className="form-control  fs-6"
-            id="username"
-            placeholder="enter username"
-            value={formData.username}
-            name="username"
-            onChange={handleChange}
-          />
-        </div>
-
-        <div class="mb-4">
           <label htmlFor="password" className="form-label">
             Password
           </label>
@@ -76,12 +59,12 @@ function Signup() {
           />
         </div>
 
-        <span><button className="btn btn-primary me-5">Signup</button></span>
+        <span><button className="btn btn-primary me-5">Login</button></span>
 
-        <span className="ms-5"> Already have an account? <Link to="/login">Login</Link></span>
+        <span className="ms-4"> if you don't have an account? <Link to="/signup">Signup</Link></span>
       </form>
     </div>
   );
 }
 
-export default Signup;
+export default Login;

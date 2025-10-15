@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const   Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropDownOpen, setIsProfileDropDownOpen] = useState(false);
 
